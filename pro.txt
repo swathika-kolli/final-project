@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Media Evolution Poster</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #333;
+    }
+
+    .poster-container {
+      margin: 20px 0;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    #mediaPoster {
+      width: 100%;
+      height: auto;
+      transition: transform 0.4s ease;
+    }
+
+    #mediaPoster:hover {
+      transform: scale(1.02);
+    }
+
+    .info button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      background: #0078D7;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .info button:hover {
+      background: #005fa3;
+    }
+
+    #infoText {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Evolution of Media</h1>
+    <p>From Typewriters to Twitter – Explore how journalism and communication have transformed.</p>
+    
+    <div class="poster-container">
+      <img src="images/media-evolution.jpg" alt="Media Evolution Poster" id="mediaPoster" />
+    </div>
+
+    <div class="info">
+      <button onclick="showInfo('old')">Old Media</button>
+      <button onclick="showInfo('new')">New Media</button>
+      <p id="infoText">Click a button to learn more.</p>
+    </div>
+  </div>
+
+  <script>
+    function showInfo(type) {
+      const info = {
+        old: "Old media includes newspapers, typewriters, and television. It was slower and one-way, controlled by a few sources.",
+        new: "New media includes smartphones, social platforms, and global connectivity. It’s fast, interactive, and user-driven."
+      };
+
+      document.getElementById("infoText").textContent = info[type];
+    }
+  </script>
+</body>
+</html>
